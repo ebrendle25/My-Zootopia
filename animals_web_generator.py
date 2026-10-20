@@ -39,14 +39,15 @@ def serialize_animal(animal):
 
     animal_info = '<li class="cards__item">'
     if name:
-        animal_info += f"Name: {name}<br/>\n"
+        animal_info += f'<div class="card__title">{name}</div>'
+    animal_info += '<p class="card__text">'
     if diet:
-        animal_info += f"Diet: {diet}<br/>\n"
+        animal_info += f'<strong>Diet:</strong> {diet}<br/>'
     if first_location:
-        animal_info += f"Location: {first_location}<br/>\n"
+        animal_info += f'<strong>Location:</strong> {first_location}<br/>'
     if animal_type:
-        animal_info += f"Type: {animal_type}<br/>\n"
-    animal_info += "<br/>\n"
+        animal_info += f'<strong>Type:</strong> {animal_type}<br/>'
+    animal_info += "</p>"
     return animal_info
 
 
