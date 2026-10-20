@@ -37,16 +37,16 @@ def serialize_animal(animal):
     first_location = locations[0] if locations else None
     animal_type = characteristics.get("type")
 
-    animal_info = ""
+    animal_info = '<li class="cards__item">'
     if name:
-        animal_info += f"Name: {name}\n"
+        animal_info += f"Name: {name}<br/>\n"
     if diet:
-        animal_info += f"Diet: {diet}\n"
+        animal_info += f"Diet: {diet}<br/>\n"
     if first_location:
-        animal_info += f"Location: {first_location}\n"
+        animal_info += f"Location: {first_location}<br/>\n"
     if animal_type:
-        animal_info += f"Type: {animal_type}\n"
-    animal_info += "\n"
+        animal_info += f"Type: {animal_type}<br/>\n"
+    animal_info += "<br/>\n"
     return animal_info
 
 
